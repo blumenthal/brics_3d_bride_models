@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_KkGS0AceEeKixeQ5OHCWLA" type="RosPackage" name="brics_3d_filter.ros_package_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_NCwGkAceEeKixeQ5OHCWLA" type="2001" fontName="Ubuntu" fillColor="8905185">
+    <children xmi:type="notation:DecorationNode" xmi:id="_NCzJ4AceEeKixeQ5OHCWLA" type="5008"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_NC1mIAceEeKixeQ5OHCWLA" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_-abSoAmLEeKLv9nLn9LaiQ" type="3001">
+        <element xmi:type="ros:Parameter" href="brics_3d_filter.ros_package#//@node.0/@parameter.0"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_-abSoQmLEeKLv9nLn9LaiQ"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_NC1mIQceEeKixeQ5OHCWLA" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_NC1mIgceEeKixeQ5OHCWLA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_NC1mIwceEeKixeQ5OHCWLA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_omDDgAceEeKixeQ5OHCWLA" type="3007">
+      <children xmi:type="notation:DecorationNode" xmi:id="_omDDhQceEeKixeQ5OHCWLA" type="5007"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_omDDgQceEeKixeQ5OHCWLA"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_omDDggceEeKixeQ5OHCWLA" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_omDDgwceEeKixeQ5OHCWLA"/>
+      <element xmi:type="ros:Subscriber" href="brics_3d_filter.ros_package#//@node.0/@subscriber.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_omDDhAceEeKixeQ5OHCWLA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_UdKNMAcfEeKixeQ5OHCWLA" type="3004">
+      <children xmi:type="notation:DecorationNode" xmi:id="_UdK0QAcfEeKixeQ5OHCWLA" type="5004"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_UdKNMQcfEeKixeQ5OHCWLA"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_UdKNMgcfEeKixeQ5OHCWLA" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_UdKNMwcfEeKixeQ5OHCWLA"/>
+      <element xmi:type="ros:Publisher" href="brics_3d_filter.ros_package#//@node.0/@publisher.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_UdKNNAcfEeKixeQ5OHCWLA"/>
+    </children>
+    <element xmi:type="ros:Node" href="brics_3d_filter.ros_package#//@node.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NCwtoAceEeKixeQ5OHCWLA" x="255" y="217"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_KkGS0QceEeKixeQ5OHCWLA"/>
+  <element xmi:type="ros:Package" href="brics_3d_filter.ros_package#/"/>
+</notation:Diagram>
