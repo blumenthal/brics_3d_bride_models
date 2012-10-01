@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_mOyjIAmNEeKLv9nLn9LaiQ" type="RosPackage" name="camera_stub.ros_package_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_n6_mQAmNEeKLv9nLn9LaiQ" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_n7ANUAmNEeKLv9nLn9LaiQ" type="5008"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_n7ANUQmNEeKLv9nLn9LaiQ" type="7001">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_n7ANUgmNEeKLv9nLn9LaiQ" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_n7ANUwmNEeKLv9nLn9LaiQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_n7ANVAmNEeKLv9nLn9LaiQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_56l_YAmNEeKLv9nLn9LaiQ" type="3004">
+      <children xmi:type="notation:DecorationNode" xmi:id="_56mmcAmNEeKLv9nLn9LaiQ" type="5004"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_56l_YQmNEeKLv9nLn9LaiQ"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_56l_YgmNEeKLv9nLn9LaiQ" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_56l_YwmNEeKLv9nLn9LaiQ"/>
+      <element xmi:type="ros:Publisher" href="camera_stub.ros_package#//@node.0/@publisher.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_56l_ZAmNEeKLv9nLn9LaiQ"/>
+    </children>
+    <element xmi:type="ros:Node" href="camera_stub.ros_package#//@node.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n6_mQQmNEeKLv9nLn9LaiQ" x="294" y="246"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_mOyjIQmNEeKLv9nLn9LaiQ"/>
+  <element xmi:type="ros:Package" href="camera_stub.ros_package#/"/>
+</notation:Diagram>

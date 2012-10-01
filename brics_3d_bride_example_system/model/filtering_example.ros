@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="filter_example1">
+  <packages href="../../brics_3d_bride_depth_perception/model/camera_stub.ros_package#/"/>
+  <packages href="../../brics_3d_bride_filtering/model/brics_3d_filter.ros_package#/"/>
+</ros:Architecture>
