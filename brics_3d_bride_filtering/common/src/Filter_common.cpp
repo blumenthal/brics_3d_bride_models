@@ -9,8 +9,8 @@
 #include <pcl/io/pcd_io.h>
 
 /* BRICS_3D includes */
-#include <algorithm/filtering/Octree.h>
-#include <util/PCLTypecaster.h>
+#include <brics_3d/algorithm/filtering/Octree.h>
+#include <brics_3d/util/PCLTypecaster.h>
 
 /* protected region user include files end */
 
@@ -38,7 +38,7 @@ public:
 class Filter_impl
 {
 	/* protected region user member variables on begin */
-	BRICS_3D::IFiltering* filter;
+	brics_3d::IFiltering* filter;
 	/* protected region user member variables end */
 
 public:
@@ -50,7 +50,7 @@ public:
     void configure(Filter_config config) 
     {
         /* protected region user configure on begin */
-    	filter = new BRICS_3D::Octree();
+    	filter = new brics_3d::Octree();
 		/* protected region user configure end */
     }
     void update(Filter_data &data, Filter_config config)
@@ -61,10 +61,11 @@ public:
     	pcl::PointCloud<pcl::PointXYZ>::Ptr outputPointCloutPcl(new pcl::PointCloud<pcl::PointXYZ>);
     	pcl::fromROSMsg(data.in_inputPointCloud, *inputPointCloutPcl);
 
-    	BRICS_3D::PointCloud3D inputPointCloud;
-    	BRICS_3D::PointCloud3D outputPointCloud;
+    	brics_3d::PointCloud3D inputPointCloud;
+    	brics_3d::PointCloud3D outputPointCloud;
 
-    	BRICS_3D::PCLTypecaster caster;
+
+    	brics_3d::PCLTypecaster caster;
     	caster.convertToBRICS3DDataType(inputPointCloutPcl, &inputPointCloud);
 
     	ROS_INFO("Filtering.");
