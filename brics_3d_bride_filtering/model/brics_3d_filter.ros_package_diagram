@@ -7,6 +7,10 @@
         <element xmi:type="ros:Parameter" href="brics_3d_filter.ros_package#//@node.0/@parameter.0"/>
         <layoutConstraint xmi:type="notation:Location" xmi:id="_-abSoQmLEeKLv9nLn9LaiQ"/>
       </children>
+      <children xmi:type="notation:Node" xmi:id="_YIQhwDMYEeKyebXB5NnPyA" type="3001">
+        <element xmi:type="ros:Parameter" href="brics_3d_filter.ros_package#//@node.0/@parameter.1"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_YIRI0DMYEeKyebXB5NnPyA"/>
+      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_NC1mIQceEeKixeQ5OHCWLA" showTitle="true"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_NC1mIgceEeKixeQ5OHCWLA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_NC1mIwceEeKixeQ5OHCWLA"/>

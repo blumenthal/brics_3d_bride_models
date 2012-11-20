@@ -18,6 +18,7 @@ class Filter_config
 {
 public:
 		std::string packedParameterSet;
+		double octreeCellSize;
 
 };
 
@@ -57,6 +58,8 @@ public:
     {
         /* protected region user update on begin */
     	//Declaration and instantiation of a cloud pointer to be used for output
+    	std::string referenceFrameId;
+    	referenceFrameId = data.in_inputPointCloud.header.frame_id;
     	pcl::PointCloud<pcl::PointXYZ>::Ptr inputPointCloutPcl(new pcl::PointCloud<pcl::PointXYZ>);
     	pcl::PointCloud<pcl::PointXYZ>::Ptr outputPointCloutPcl(new pcl::PointCloud<pcl::PointXYZ>);
     	pcl::fromROSMsg(data.in_inputPointCloud, *inputPointCloutPcl);
@@ -69,11 +72,17 @@ public:
     	caster.convertToBRICS3DDataType(inputPointCloutPcl, &inputPointCloud);
 
     	ROS_INFO("Filtering.");
+    	brics_3d::Octree* filterConfig;
+    	filterConfig = dynamic_cast<brics_3d::Octree*>(filter);
+    	if (filterConfig !=0) {
+    		filterConfig->setVoxelSize(config.octreeCellSize);
+    		ROS_INFO_STREAM("	using setVoxelSize = " << filterConfig->getVoxelSize());
+    	}
     	filter->filter(&inputPointCloud, &outputPointCloud);
 
     	caster.convertToPCLDataType(outputPointCloutPcl, &outputPointCloud);
     	pcl::toROSMsg(*outputPointCloutPcl, data.out_outputPointCloud);
-
+    	data.out_outputPointCloud.header.frame_id = referenceFrameId;
     	/* protected region user update end */
     }
 

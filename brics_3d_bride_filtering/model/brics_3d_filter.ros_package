@@ -2,8 +2,9 @@
 <ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_3d_bride_filtering" author="Sebastian Blumenthal" description="" license="LGPL, BSD" url="http://www.best-of-robotics.org/brics_3d/">
   <node name="Filter">
     <publisher name="outputPointCloud" eventHandler="" msg="sensor_msgs::PointCloud2"/>
-    <subscriber name="inputPointCloud" eventHandler="" msg="sensor_msgs::PointCloud2"/>
+    <subscriber name="inputPointCloud" eventHandler="" msg="sensor_msgs::PointCloud2" eventPort="true"/>
     <parameter name="packedParameterSet" value="justSomeValue" type="string"/>
+    <parameter name="octreeCellSize" value="0.01" type="double"/>
   </node>
   <depend>brics_3d</depend>
   <depend>pcl</depend>
