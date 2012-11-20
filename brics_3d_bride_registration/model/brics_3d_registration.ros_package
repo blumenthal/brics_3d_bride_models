@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0">
+  <node name="Registrator">
+    <publisher name="transform" msg="tf::tfMessage"/>
+    <subscriber name="dataPointCloud" msg="sensor_msgs::PointCloud2" eventPort="true"/>
+    <subscriber name="modelPointCloud" msg="sensor_msgs::PointCloud2"/>
+  </node>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf</depend>
+</ros:Package>
