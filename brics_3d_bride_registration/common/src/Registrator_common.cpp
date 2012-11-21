@@ -11,7 +11,11 @@
 /* BRICS_3D includes */
 #include <brics_3d/core/HomogeneousMatrix44.h>
 #include <brics_3d/algorithm/registration/IterativeClosestPoint.h>
+#include <brics_3d/algorithm/registration/PointCorrespondenceKDTree.h>
+#include <brics_3d/algorithm/registration/RigidTransformationEstimationSVD.h>
 #include <brics_3d/util/PCLTypecaster.h>
+
+#include <brics_3d_ros/SceneGraphTypeCasts.h>
 
 typedef pcl::PointXYZ PointType;
 /* protected region user include files end */
@@ -52,12 +56,18 @@ public:
     void configure(Registrator_config config) 
     {
         /* protected region user configure on begin */
-    	registrator = new brics_3d::IterativeClosestPoint();
+    	registrator = new brics_3d::IterativeClosestPoint(new brics_3d::PointCorrespondenceKDTree(), new brics_3d::RigidTransformationEstimationSVD());
 		/* protected region user configure end */
     }
     void update(Registrator_data &data, Registrator_config config)
     {
         /* protected region user update on begin */
+    	if(data.in_dataPointCloud.width == 0 || data.in_modelPointCloud.width == 0) {
+    		ROS_WARN_STREAM("Empty input point clouds. Skipping.");
+    		return;
+    	}
+
+    	/* data conversions */
     	pcl::PointCloud<PointType>::Ptr dataPointCloutPcl(new pcl::PointCloud<PointType>);
     	pcl::PointCloud<PointType>::Ptr modelPointCloutPcl(new pcl::PointCloud<PointType>);
     	pcl::fromROSMsg(data.in_dataPointCloud, *dataPointCloutPcl);
@@ -66,18 +76,27 @@ public:
     	brics_3d::PointCloud3D dataPointCloud;
     	brics_3d::PointCloud3D modelPointCloud;
 
-
     	brics_3d::PCLTypecaster caster;
     	caster.convertToBRICS3DDataType(dataPointCloutPcl, &dataPointCloud);
     	caster.convertToBRICS3DDataType(modelPointCloutPcl, &modelPointCloud);
-    	brics_3d::HomogeneousMatrix44* resultTransform = new brics_3d::HomogeneousMatrix44();
+    	brics_3d::IHomogeneousMatrix44::IHomogeneousMatrix44Ptr resultTransform(new brics_3d::HomogeneousMatrix44());
 
+    	/* The actual computation: registration of two point clouds */
     	ROS_INFO("Registering.");
-    	registrator->match(&modelPointCloud, &dataPointCloud, resultTransform);
+    	registrator->match(&modelPointCloud, &dataPointCloud, resultTransform.get());
+    	ROS_INFO_STREAM("resulting transform = " << std::endl << *resultTransform);
 
-    	ROS_INFO_STREAM("resulting transform = " << std::endl << resultTransform);
+    	/* Some gymnastics to publish a TF. In BRIDE code we cannot use the tf brodcaster... */
+    	tf::Transform tfTransform;
+    	tf::StampedTransform tfStampedTransform;
+    	geometry_msgs::TransformStamped tfGeometryMsg;
+    	brics_3d::rsg::SceneGraphTypeCasts::convertHomogeniousMatrixToTfTransform(resultTransform, tfTransform);
+    	tfStampedTransform.setData(tfTransform);
+    	tf::transformStampedTFToMsg(tfStampedTransform, tfGeometryMsg);
 
-    	delete resultTransform;
+    	tf::tfMessage message;
+    	message.transforms.push_back(tfGeometryMsg);
+    	data.out_transform = message;
 		/* protected region user update end */
     }
 

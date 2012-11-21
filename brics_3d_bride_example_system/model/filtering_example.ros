@@ -2,4 +2,5 @@
 <ros:Architecture xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_3d_example_system">
   <packages href="../../brics_3d_bride_depth_perception/model/camera_stub.ros_package#/"/>
   <packages href="../../brics_3d_bride_filtering/model/brics_3d_filter.ros_package#/"/>
+  <packages href="../../brics_3d_bride_registration/model/brics_3d_registration.ros_package#/"/>
 </ros:Architecture>

@@ -8,6 +8,7 @@
   <depend>geometry_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>tf</depend>
-  <depend>brics_3d</depend>
   <depend>pcl</depend>
+  <depend>brics_3d</depend>
+  <depend>brics_3d_ros</depend>
 </ros:Package>
