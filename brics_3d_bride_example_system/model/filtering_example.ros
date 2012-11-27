@@ -3,4 +3,5 @@
   <packages href="../../brics_3d_bride_depth_perception/model/camera_stub.ros_package#/"/>
   <packages href="../../brics_3d_bride_filtering/model/brics_3d_filter.ros_package#/"/>
   <packages href="../../brics_3d_bride_registration/model/brics_3d_registration.ros_package#/"/>
+  <packages href="../../brics_3d_bride_segmentation/model/brics_3d_segmentation.ros_package#/"/>
 </ros:Architecture>

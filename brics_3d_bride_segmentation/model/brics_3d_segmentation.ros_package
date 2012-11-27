@@ -1,2 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0"/>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_3d_bride_segmentation" author="blumenthal" license="BSD, LGPL">
+  <node name="Segmentor">
+    <publisher name="pointCloudSegments" msg="brics_3d_msgs::PointCloudSegments"/>
+    <subscriber name="inputPointCloud" msg="sensor_msgs::PointCloud2"/>
+  </node>
+  <node name="DichotomySegmentor">
+    <publisher name="inliers" msg="sensor_msgs::PointCloud2"/>
+    <publisher name="outliers" msg="sensor_msgs::PointCloud2"/>
+    <subscriber name="inputPointCloud" msg="sensor_msgs::PointCloud2" eventPort="true"/>
+  </node>
+  <depend>sensor_msgs</depend>
+  <depend>pcl</depend>
+  <depend>pcl_ros</depend>
+  <depend>brics_3d_ros</depend>
+  <depend>brics_3d_msgs</depend>
+</ros:Package>

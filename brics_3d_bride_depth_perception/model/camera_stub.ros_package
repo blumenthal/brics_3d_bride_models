@@ -4,18 +4,6 @@
     <publisher name="pointClouds" msg="sensor_msgs::PointCloud2"/>
   </node>
   <depend>sensor_msgs</depend>
-  <topic name="/camera/points/depth" publisher="//@node.0/@publisher.0">
-    <subscriber href="../../brics_3d_bride_filtering/model/brics_3d_filter.ros_package#//@node.0/@subscriber.0"/>
-  </topic>
-  <topic name="camera/depth/points" publisher="//@node.0/@publisher.0">
-    <subscriber href="../../brics_3d_bride_filtering/model/brics_3d_filter.ros_package#//@node.0/@subscriber.0"/>
-  </topic>
-  <topic name="camera/depth/points" publisher="//@node.0/@publisher.0">
-    <subscriber href="../../brics_3d_bride_filtering/model/brics_3d_filter.ros_package#//@node.0/@subscriber.0"/>
-  </topic>
-  <topic name="camera/depth/points" publisher="//@node.0/@publisher.0">
-    <subscriber href="../../brics_3d_bride_filtering/model/brics_3d_filter.ros_package#//@node.0/@subscriber.0"/>
-  </topic>
   <topic name="/camera/depth/points" publisher="//@node.0/@publisher.0">
     <subscriber href="../../brics_3d_bride_filtering/model/brics_3d_filter.ros_package#//@node.0/@subscriber.0"/>
   </topic>
