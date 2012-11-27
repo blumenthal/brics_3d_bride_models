@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_sczmgDieEeKZqrzeEMn57w" type="RosPackage" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_sdSusDieEeKZqrzeEMn57w" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_sdSusjieEeKZqrzeEMn57w" type="5008"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_sdSuszieEeKZqrzeEMn57w" type="7001">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_sdSutDieEeKZqrzeEMn57w" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_sdSutTieEeKZqrzeEMn57w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_sdSutjieEeKZqrzeEMn57w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_sdT80DieEeKZqrzeEMn57w" type="3004">
+      <children xmi:type="notation:DecorationNode" xmi:id="_sdUj4DieEeKZqrzeEMn57w" type="5004"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_sdT80TieEeKZqrzeEMn57w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_sdT80jieEeKZqrzeEMn57w" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_sdT80zieEeKZqrzeEMn57w"/>
+      <element xmi:type="ros:Publisher" href="brics_3d_for_each.ros_package#//@node.0/@publisher.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sdT81DieEeKZqrzeEMn57w" x="239" y="45"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_sdUj4TieEeKZqrzeEMn57w" type="3007">
+      <children xmi:type="notation:DecorationNode" xmi:id="_sdUj5jieEeKZqrzeEMn57w" type="5007"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_sdUj4jieEeKZqrzeEMn57w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_sdUj4zieEeKZqrzeEMn57w" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_sdUj5DieEeKZqrzeEMn57w"/>
+      <element xmi:type="ros:Subscriber" href="brics_3d_for_each.ros_package#//@node.0/@subscriber.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sdUj5TieEeKZqrzeEMn57w" x="-84" y="45"/>
+    </children>
+    <element xmi:type="ros:Node" href="brics_3d_for_each.ros_package#//@node.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sdSusTieEeKZqrzeEMn57w" x="324" y="189"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_sczmgTieEeKZqrzeEMn57w"/>
+  <element xmi:type="ros:Package" href="brics_3d_for_each.ros_package#/"/>
+</notation:Diagram>

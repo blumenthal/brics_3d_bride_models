@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_3d_bride_utils" author="blumenthal" license="LGPL, BSD">
+  <node name="ForEachSegment">
+    <publisher name="segment" msg="sensor_msgs::PointCloud2"/>
+    <subscriber name="allSegments" msg="brics_3d_msgs::PointCloudSegments" eventPort="true"/>
+  </node>
+  <depend>sensor_msgs</depend>
+  <depend>brics_3d_msgs</depend>
+</ros:Package>

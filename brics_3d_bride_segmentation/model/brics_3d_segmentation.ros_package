@@ -14,4 +14,7 @@
   <depend>pcl_ros</depend>
   <depend>brics_3d_ros</depend>
   <depend>brics_3d_msgs</depend>
+  <topic name="aggregated_segmants" publisher="//@node.0/@publisher.0">
+    <subscriber href="../../brics_3d_bride_utils/model/brics_3d_for_each.ros_package#//@node.0/@subscriber.0"/>
+  </topic>
 </ros:Package>
