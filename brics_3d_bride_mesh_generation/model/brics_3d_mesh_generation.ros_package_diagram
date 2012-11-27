@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_qWcZIDitEeKZqrzeEMn57w" type="RosPackage" name="brics_3d_mesh_generation.ros_package_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_rtvjQDitEeKZqrzeEMn57w" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_rtz0sDitEeKZqrzeEMn57w" type="5008"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_rt5UQDitEeKZqrzeEMn57w" type="7001">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_rt5UQTitEeKZqrzeEMn57w" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_rt5UQjitEeKZqrzeEMn57w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_rt5UQzitEeKZqrzeEMn57w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_xpcssDitEeKZqrzeEMn57w" type="3007">
+      <children xmi:type="notation:DecorationNode" xmi:id="_xpdTwDitEeKZqrzeEMn57w" type="5007"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_xpcssTitEeKZqrzeEMn57w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_xpcssjitEeKZqrzeEMn57w" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_xpcsszitEeKZqrzeEMn57w"/>
+      <element xmi:type="ros:Subscriber" href="brics_3d_mesh_generation.ros_package#//@node.0/@subscriber.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xpcstDitEeKZqrzeEMn57w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_0lSywDitEeKZqrzeEMn57w" type="3004">
+      <children xmi:type="notation:DecorationNode" xmi:id="_0lSyxTitEeKZqrzeEMn57w" type="5004"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_0lSywTitEeKZqrzeEMn57w"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_0lSywjitEeKZqrzeEMn57w" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_0lSywzitEeKZqrzeEMn57w"/>
+      <element xmi:type="ros:Publisher" href="brics_3d_mesh_generation.ros_package#//@node.0/@publisher.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0lSyxDitEeKZqrzeEMn57w" x="239" y="90"/>
+    </children>
+    <element xmi:type="ros:Node" href="brics_3d_mesh_generation.ros_package#//@node.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rtvjQTitEeKZqrzeEMn57w" x="351" y="135"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_qWcZITitEeKZqrzeEMn57w"/>
+  <element xmi:type="ros:Package" href="brics_3d_mesh_generation.ros_package#/"/>
+</notation:Diagram>
