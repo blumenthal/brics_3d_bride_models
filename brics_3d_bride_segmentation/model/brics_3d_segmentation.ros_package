@@ -17,4 +17,5 @@
   <topic name="aggregated_segmants" publisher="//@node.0/@publisher.0">
     <subscriber href="../../brics_3d_bride_utils/model/brics_3d_for_each.ros_package#//@node.0/@subscriber.0"/>
   </topic>
+  <topic name="non_plane_points" publisher="//@node.1/@publisher.1" subscriber="//@node.0/@subscriber.0"/>
 </ros:Package>
