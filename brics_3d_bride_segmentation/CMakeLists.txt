@@ -42,7 +42,10 @@ rosbuild_add_executable(Segmentor ros/src/Segmentor_ros.cpp)
 rosbuild_add_executable(DichotomySegmentor ros/src/DichotomySegmentor_ros.cpp) 
 
 # protected region user Cmake macros on begin #
-    target_link_libraries(Segmentor brics3d_world_model brics3d_util brics3d_algorithm brics3d_core  
+	rosbuild_find_ros_package(brics_3d)
+	rosbuild_add_executable(Segmentor ${brics_3d_PACKAGE_PATH}/src/brics_3d/algorithm/segmentation/EuclideanClusteringPCL.cpp ros/src/Segmentor_ros.cpp) 
+		
+    target_link_libraries(Segmentor  brics3d_world_model brics3d_util brics3d_algorithm brics3d_core  
         scanlib 
         6dslam_core 
         newmat_cmake    
