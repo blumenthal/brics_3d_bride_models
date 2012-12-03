@@ -5,4 +5,5 @@
   <packages href="../../brics_3d_bride_registration/model/brics_3d_registration.ros_package#/"/>
   <packages href="../../brics_3d_bride_segmentation/model/brics_3d_segmentation.ros_package#/"/>
   <packages href="../../brics_3d_bride_utils/model/brics_3d_for_each.ros_package#/"/>
+  <packages href="../../brics_3d_bride_mesh_generation/model/brics_3d_mesh_generation.ros_package#/"/>
 </ros:Architecture>

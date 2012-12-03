@@ -2,9 +2,10 @@
 <ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_3d_bride_mesh_generation" author="blumenthal" license="LGPL, BSD">
   <node name="MeshGenerator">
     <publisher name="mesh" msg="pcl::PolygonMesh"/>
-    <subscriber name="pointCloud" msg="sensor_msgs::PointCloud2" eventPort="true"/>
+    <subscriber name="inputPointCloud" msg="sensor_msgs::PointCloud2" eventPort="true"/>
   </node>
   <depend>sensor_msgs</depend>
-  <depend>brics_3d_msgs</depend>
   <depend>pcl</depend>
+  <depend>brics_3d_msgs</depend>
+  <depend>brics_3d_ros</depend>
 </ros:Package>

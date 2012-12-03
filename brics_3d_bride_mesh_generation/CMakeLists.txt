@@ -41,4 +41,26 @@ INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/common/src)
 rosbuild_add_executable(MeshGenerator ros/src/MeshGenerator_ros.cpp) 
 
 # protected region user Cmake macros on begin #
+	OPTION(USE_OSG "Enable Open Scene Graph" OFF)    
+	IF(USE_OSG)
+	    FIND_PACKAGE(OpenSceneGraph COMPONENTS osgGA osgUtil osgViewer)
+	    ADD_DEFINITIONS(-DENABLE_OSG)
+	    
+	    target_link_libraries(MeshGenerator  brics3d_world_model brics3d_util brics3d_algorithm brics3d_core  
+        scanlib 
+        6dslam_core 
+        newmat_cmake    
+        ${DL_LIB}
+        flann_s
+        ANN
+        ${OSG_LIBRARY_DEBUG} 
+        ${OSGGA_LIBRARY_DEBUG} 
+        ${OSGVIEWER_LIBRARY_DEBUG}
+     )
+    ELSE(USE_OSG)
+    	target_link_libraries(MeshGenerator  brics3d_world_model brics3d_util brics3d_algorithm brics3d_core)
+	ENDIF(USE_OSG)  
+
+
+
 # protected region user Cmake macros end #

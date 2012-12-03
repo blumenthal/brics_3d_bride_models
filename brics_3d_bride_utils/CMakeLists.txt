@@ -38,7 +38,7 @@ INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/common/src)
 #target_link_libraries(example ${PROJECT_NAME})
 
 # for every node that is executable we have to generate a line like:
-rosbuild_add_executable(ForEachSegment ros/src/ForEachSegment_ros.cpp) 
+rosbuild_add_executable(MeshVisualizer ros/src/MeshVisualizer_ros.cpp) 
 
 # protected region user Cmake macros on begin #
 # protected region user Cmake macros end #
