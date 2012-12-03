@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ros:Package xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ros="http://ros/1.0" name="brics_3d_scene_model" author="" description="" rosdep="">
+  <node name="scene_model">
+    <subscriber name="detected_poses" msg="geometry_msgs::PoseStamped" eventPort="true"/>
+    <serviceServer name="get_scene_objects" msg="brics_3d_msgs::GetSceneObjects"/>
+  </node>
+  <depend>geometry_msgs</depend>
+  <depend>brics_3d_msgs</depend>
+</ros:Package>

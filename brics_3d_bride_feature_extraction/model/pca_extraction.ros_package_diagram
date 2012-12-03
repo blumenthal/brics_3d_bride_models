@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_m6CSkD1hEeKkA_1wlhDT2A" type="RosPackage" name="pca_extraction.ros_package_diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_oMv3oD1hEeKkA_1wlhDT2A" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_oMwesD1hEeKkA_1wlhDT2A" type="5008"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_oMwesT1hEeKkA_1wlhDT2A" type="7001">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_oMwesj1hEeKkA_1wlhDT2A" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_oMwesz1hEeKkA_1wlhDT2A"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_oMwetD1hEeKkA_1wlhDT2A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_BHcaoD1iEeKkA_1wlhDT2A" type="3007">
+      <children xmi:type="notation:DecorationNode" xmi:id="_BHdBsD1iEeKkA_1wlhDT2A" type="5007"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_BHcaoT1iEeKkA_1wlhDT2A"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_BHcaoj1iEeKkA_1wlhDT2A" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_BHcaoz1iEeKkA_1wlhDT2A"/>
+      <element xmi:type="ros:Subscriber" href="pca_extraction.ros_package#//@node.0/@subscriber.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BHcapD1iEeKkA_1wlhDT2A"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_DGrHcD1iEeKkA_1wlhDT2A" type="3004">
+      <children xmi:type="notation:DecorationNode" xmi:id="_DGrHdT1iEeKkA_1wlhDT2A" type="5004"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_DGrHcT1iEeKkA_1wlhDT2A"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_DGrHcj1iEeKkA_1wlhDT2A" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_DGrHcz1iEeKkA_1wlhDT2A"/>
+      <element xmi:type="ros:Publisher" href="pca_extraction.ros_package#//@node.0/@publisher.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DGrHdD1iEeKkA_1wlhDT2A"/>
+    </children>
+    <element xmi:type="ros:Node" href="pca_extraction.ros_package#//@node.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oMv3oT1hEeKkA_1wlhDT2A" x="272" y="128"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_m6CSkT1hEeKkA_1wlhDT2A"/>
+  <element xmi:type="ros:Package" href="pca_extraction.ros_package#/"/>
+</notation:Diagram>

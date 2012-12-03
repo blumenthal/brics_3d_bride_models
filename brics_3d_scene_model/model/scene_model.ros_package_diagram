@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_TJnSgD1VEeKPZ58aP67Wtg" type="RosPackage" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_TKnYED1VEeKPZ58aP67Wtg" type="2001" fontName="Ubuntu">
+    <children xmi:type="notation:DecorationNode" xmi:id="_TKn_ID1VEeKPZ58aP67Wtg" type="5008"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_TKn_IT1VEeKPZ58aP67Wtg" type="7001">
+      <styles xmi:type="notation:TitleStyle" xmi:id="_TKn_Ij1VEeKPZ58aP67Wtg" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_TKn_Iz1VEeKPZ58aP67Wtg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_TKn_JD1VEeKPZ58aP67Wtg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_TK5r8D1VEeKPZ58aP67Wtg" type="3002">
+      <children xmi:type="notation:DecorationNode" xmi:id="_TK6TAD1VEeKPZ58aP67Wtg" type="5002"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_TK5r8T1VEeKPZ58aP67Wtg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_TK5r8j1VEeKPZ58aP67Wtg" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_TK5r8z1VEeKPZ58aP67Wtg"/>
+      <element xmi:type="ros:ServiceServer" href="scene_model.ros_package#//@node.0/@serviceServer.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TK5r9D1VEeKPZ58aP67Wtg" x="357" y="35"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_cIEbQD1VEeKPZ58aP67Wtg" type="3007">
+      <children xmi:type="notation:DecorationNode" xmi:id="_cIEbRT1VEeKPZ58aP67Wtg" type="5007"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_cIEbQT1VEeKPZ58aP67Wtg"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_cIEbQj1VEeKPZ58aP67Wtg" fontName="Ubuntu"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_cIEbQz1VEeKPZ58aP67Wtg"/>
+      <element xmi:type="ros:Subscriber" href="scene_model.ros_package#//@node.0/@subscriber.0"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cIEbRD1VEeKPZ58aP67Wtg"/>
+    </children>
+    <element xmi:type="ros:Node" href="scene_model.ros_package#//@node.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TKnYET1VEeKPZ58aP67Wtg" x="203" y="105" width="358" height="253"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_TJn5kD1VEeKPZ58aP67Wtg"/>
+  <element xmi:type="ros:Package" href="scene_model.ros_package#/"/>
+</notation:Diagram>
