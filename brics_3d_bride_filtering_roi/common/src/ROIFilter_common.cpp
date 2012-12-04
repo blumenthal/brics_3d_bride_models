@@ -7,6 +7,9 @@
 #include <brics_3d/core/HomogeneousMatrix44.h>
 #include <brics_3d/algorithm/filtering/BoxROIExtractor.h>
 #include <brics_3d/util/PCLTypecaster.h>
+
+#include <tf/transform_listener.h>
+#include "sensor_msgs/point_cloud_conversion.h"
 /* protected region user include files end */
 
 class ROIFilter_config
@@ -40,6 +43,8 @@ class ROIFilter_impl
 	/* protected region user member variables on begin */
 	brics_3d::BoxROIExtractor* filter;
 	brics_3d::IHomogeneousMatrix44::IHomogeneousMatrix44Ptr center;
+
+	tf::TransformListener tfListener;
 	/* protected region user member variables end */
 
 public:
@@ -59,13 +64,30 @@ public:
     void update(ROIFilter_data &data, ROIFilter_config config)
     {
         /* protected region user update on begin */
-
     	/* prepare input */
+
+//		std::string sourceFrameId;
+//		std::string targetFrameId;
+		std::string from_frame = data.in_inputPointCloud.header.frame_id;
+		std::string to_frame = "/base_link";
+		ROS_DEBUG("from_frame: %s, to_frame %s", from_frame.c_str(), to_frame.c_str());
+		sensor_msgs::PointCloud2 point_cloud_transformed;
+		if (!transformPointCloud(tfListener, from_frame, to_frame, data.in_inputPointCloud, point_cloud_transformed)) {
+			 ROS_INFO("pointCloud tf transform...failed");
+			 data.out_outputPointCloud.header = data.in_inputPointCloud.header;
+			 return;
+		}
+
+
+
     	std::string referenceFrameId;
-    	referenceFrameId = data.in_inputPointCloud.header.frame_id;
+//    	referenceFrameId = data.in_inputPointCloud.header.frame_id;
+    	referenceFrameId = to_frame;
     	pcl::PointCloud<pcl::PointXYZ>::Ptr inputPointCloutPcl(new pcl::PointCloud<pcl::PointXYZ>);
     	pcl::PointCloud<pcl::PointXYZ>::Ptr outputPointCloutPcl(new pcl::PointCloud<pcl::PointXYZ>);
-    	pcl::fromROSMsg(data.in_inputPointCloud, *inputPointCloutPcl);
+//    	pcl::fromROSMsg(data.in_inputPointCloud, *inputPointCloutPcl);
+    	pcl::fromROSMsg(point_cloud_transformed, *inputPointCloutPcl);
+
 
     	brics_3d::PointCloud3D inputPointCloud;
     	brics_3d::PointCloud3D outputPointCloud;
@@ -98,6 +120,38 @@ public:
 
     
     /* protected region user additional functions on begin */
+
+    //Something hackish for now...
+    bool transformPointCloud(tf::TransformListener &tfListener,
+    		std::string &fromFrame, std::string &toFrame,
+    		const sensor_msgs::PointCloud2 &srcPointCloud,
+    		sensor_msgs::PointCloud2 &transformedPointCloud) {
+
+    	//bool setup_tf = true;
+    	bool success_tf = false;
+    	tf::StampedTransform transform;
+
+    	sensor_msgs::PointCloud pointCloudMsgConvert;
+    	sensor_msgs::PointCloud pointCloudMsgTransformed;
+
+    	sensor_msgs::convertPointCloud2ToPointCloud(srcPointCloud,pointCloudMsgConvert);
+
+    		try {
+    		tfListener.waitForTransform(fromFrame, toFrame, ros::Time::now(),
+    					ros::Duration(1.0));
+    		tfListener.transformPointCloud(std::string(toFrame),
+    					pointCloudMsgConvert, pointCloudMsgTransformed);
+    		success_tf = true;
+    		} catch (tf::TransformException ex) {
+    			success_tf = false;
+    			return success_tf;
+    		}
+
+    	sensor_msgs::convertPointCloudToPointCloud2(pointCloudMsgTransformed, transformedPointCloud);
+
+    	return success_tf;
+    }
+
 	/* protected region user additional functions end */
     
 };

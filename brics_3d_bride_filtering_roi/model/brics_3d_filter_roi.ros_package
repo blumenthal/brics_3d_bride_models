@@ -10,6 +10,7 @@
     <parameter name="min_z" value="0" type="double"/>
     <parameter name="max_z" value="2" type="double"/>
   </node>
+  <depend>tf</depend>
   <depend>pcl</depend>
   <depend>brics_3d</depend>
   <depend>sensor_msgs</depend>
