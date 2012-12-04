@@ -61,7 +61,8 @@ public:
     	brics_3d::PCLTypecaster caster;
     	caster.convertToBRICS3DDataType(inputPointCloutPcl, &inputPointCloud);
 
-    	/* do computation (PCA based pose estimation)*/
+    	/* do computation (PCA based pose estimation) */
+    	ROS_INFO_STREAM("Estimating pose.");
     	brics_3d::IHomogeneousMatrix44::IHomogeneousMatrix44Ptr estimatedTransform(new brics_3d::HomogeneousMatrix44());
     	brics_3d::Vector3D resultDimensions; // here we do not use this information
     	boundingBoxExtractor->computeOrientedBoundingBox(&inputPointCloud, estimatedTransform.get(), resultDimensions);

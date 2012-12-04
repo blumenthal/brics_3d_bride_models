@@ -6,4 +6,7 @@
   </node>
   <depend>sensor_msgs</depend>
   <depend>brics_3d_msgs</depend>
+  <topic name="segmented_objects" publisher="//@node.0/@publisher.0">
+    <subscriber href="../../brics_3d_bride_feature_extraction/model/pca_extraction.ros_package#//@node.0/@subscriber.0"/>
+  </topic>
 </ros:Package>

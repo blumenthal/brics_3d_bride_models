@@ -8,4 +8,7 @@
   <depend>geometry_msgs</depend>
   <depend>pcl</depend>
   <depend>brics_3d_ros</depend>
+  <topic name="objects" publisher="//@node.0/@publisher.0">
+    <subscriber href="../../brics_3d_scene_model/model/scene_model.ros_package#//@node.0/@subscriber.0"/>
+  </topic>
 </ros:Package>

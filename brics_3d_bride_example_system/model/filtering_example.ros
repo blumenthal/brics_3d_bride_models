@@ -5,4 +5,6 @@
   <packages href="../../brics_3d_bride_filtering_roi/model/brics_3d_filter_roi.ros_package#/"/>
   <packages href="../../brics_3d_bride_segmentation/model/brics_3d_segmentation.ros_package#/"/>
   <packages href="../../brics_3d_bride_utils/model/brics_3d_for_each.ros_package#/"/>
+  <packages href="../../brics_3d_bride_feature_extraction/model/pca_extraction.ros_package#/"/>
+  <packages href="../../brics_3d_scene_model/model/scene_model.ros_package#/"/>
 </ros:Architecture>
