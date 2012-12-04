@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:ros="http://ros/1.0" xmi:id="_KkGS0AceEeKixeQ5OHCWLA" type="RosPackage" name="brics_3d_filter.ros_package_diagram" measurementUnit="Pixel">
-  <children xmi:type="notation:Shape" xmi:id="_NCwGkAceEeKixeQ5OHCWLA" type="2001" fontName="Ubuntu" fillColor="8905185">
+  <children xmi:type="notation:Shape" xmi:id="_NCwGkAceEeKixeQ5OHCWLA" type="2001" fontName="Ubuntu">
     <children xmi:type="notation:DecorationNode" xmi:id="_NCzJ4AceEeKixeQ5OHCWLA" type="5008"/>
     <children xmi:type="notation:BasicCompartment" xmi:id="_NC1mIAceEeKixeQ5OHCWLA" type="7001">
-      <children xmi:type="notation:Node" xmi:id="_-abSoAmLEeKLv9nLn9LaiQ" type="3001">
-        <element xmi:type="ros:Parameter" href="brics_3d_filter.ros_package#//@node.0/@parameter.0"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_-abSoQmLEeKLv9nLn9LaiQ"/>
-      </children>
-      <children xmi:type="notation:Node" xmi:id="_YIQhwDMYEeKyebXB5NnPyA" type="3001">
-        <element xmi:type="ros:Parameter" href="brics_3d_filter.ros_package#//@node.0/@parameter.1"/>
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_YIRI0DMYEeKyebXB5NnPyA"/>
-      </children>
       <styles xmi:type="notation:TitleStyle" xmi:id="_NC1mIQceEeKixeQ5OHCWLA" showTitle="true"/>
       <styles xmi:type="notation:SortingStyle" xmi:id="_NC1mIgceEeKixeQ5OHCWLA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_NC1mIwceEeKixeQ5OHCWLA"/>
