@@ -13,12 +13,6 @@
   <depend>pcl</depend>
   <depend>brics_3d</depend>
   <depend>sensor_msgs</depend>
-  <topic name="filter_to_plane" publisher="//@node.0/@publisher.0">
-    <subscriber href="../../brics_3d_bride_segmentation/model/brics_3d_segmentation.ros_package#//@node.1/@subscriber.0"/>
-  </topic>
-  <topic name="roi_filtered_cloud" publisher="//@node.0/@publisher.0">
-    <subscriber href="../../brics_3d_bride_filtering/model/brics_3d_filter.ros_package#//@node.0/@subscriber.0"/>
-  </topic>
   <topic name="roi_cloud" publisher="//@node.0/@publisher.0">
     <subscriber href="../../brics_3d_bride_filtering_octree/model/brics_3d_octree_filter.ros_package#//@node.0/@subscriber.0"/>
   </topic>
