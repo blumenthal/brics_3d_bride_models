@@ -6,6 +6,7 @@
 /* protected region user include files on begin */
 #include <brics_3d/core/HomogeneousMatrix44.h>
 #include <brics_3d/algorithm/filtering/BoxROIExtractor.h>
+#include <brics_3d/util/PCLTypecaster.h>
 /* protected region user include files end */
 
 class ROIFilter_config
@@ -37,8 +38,8 @@ public:
 class ROIFilter_impl
 {
 	/* protected region user member variables on begin */
-	brics_3d::BoxROIExtractor* roiFilter;
-	brics_3d::IHomogeneousMatrix44* center;
+	brics_3d::BoxROIExtractor* filter;
+	brics_3d::IHomogeneousMatrix44::IHomogeneousMatrix44Ptr center;
 	/* protected region user member variables end */
 
 public:
@@ -50,9 +51,9 @@ public:
     void configure(ROIFilter_config config) 
     {
         /* protected region user configure on begin */
-    	roiFilter = new brics_3d::BoxROIExtractor();
-    	center = new brics_3d::HomogeneousMatrix44(); //
-    	roiFilter->setBoxOrigin(center);
+    	filter = new brics_3d::BoxROIExtractor();
+    	center = brics_3d::HomogeneousMatrix44::IHomogeneousMatrix44Ptr(new brics_3d::HomogeneousMatrix44());
+    	filter->setBoxOrigin(center);
 		/* protected region user configure end */
     }
     void update(ROIFilter_data &data, ROIFilter_config config)
@@ -73,16 +74,18 @@ public:
     	caster.convertToBRICS3DDataType(inputPointCloutPcl, &inputPointCloud);
 
 
-    	filter->setSizeX(config.max_x-config.min_x); // set new dimensions
-    	filter->setSizeY(config.max_y-config.min_y);
-    	filter->setSizeZ(config.max_z-config.min_z);
-    	double* transformMatrix = center->getSetRaw(); // set new center
-    	transformMatrix[12] = (config.max_x-config.min_x)/2.0;
-    	transformMatrix[13] = (config.max_y-config.min_y)/2.0;
-    	transformMatrix[14] = (config.max_z-config.min_z)/2.0;
-
     	/* do computation */
-    	ROS_INFO("ROIFiltering.");
+    	ROS_INFO_STREAM("ROIFiltering.");
+//    	ROS_INFO_STREAM("\t with params: min_x = " << config.min_x << " max_x = " << config.max_x << " min_y = " << config.min_y << " max_y " << config.max_y << " min_z = " << config.min_z << " max_z = " << config.max_z);
+    	filter->setSizeX(fabs(config.max_x-config.min_x)); // set new dimensions
+    	filter->setSizeY(fabs(config.max_y-config.min_y));
+    	filter->setSizeZ(fabs(config.max_z-config.min_z));
+    	double* transformMatrix = center->setRawData(); // set new center
+    	transformMatrix[12] = config.max_x - ((config.max_x-config.min_x)/2.0);
+    	transformMatrix[13] = config.max_y - ((config.max_y-config.min_y)/2.0);
+    	transformMatrix[14] = config.max_z - ((config.max_z-config.min_z)/2.0);
+//    	ROS_INFO_STREAM("\t origin: " << *(filter->getBoxOrigin()));
+
     	filter->filter(&inputPointCloud, &outputPointCloud);
 
     	/* prepare output*/

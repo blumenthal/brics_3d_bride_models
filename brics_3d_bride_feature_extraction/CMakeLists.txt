@@ -41,4 +41,12 @@ INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/common/src)
 rosbuild_add_executable(PCAPoseEstimation ros/src/PCAPoseEstimation_ros.cpp) 
 
 # protected region user Cmake macros on begin #
+    target_link_libraries(PCAPoseEstimation brics3d_world_model brics3d_util brics3d_algorithm brics3d_core  
+        scanlib 
+        6dslam_core 
+        newmat_cmake    
+        ${DL_LIB}
+        flann_s
+        ANN
+     )
 # protected region user Cmake macros end #

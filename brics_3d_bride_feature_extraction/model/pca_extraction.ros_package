@@ -6,4 +6,6 @@
   </node>
   <depend>sensor_msgs</depend>
   <depend>geometry_msgs</depend>
+  <depend>pcl</depend>
+  <depend>brics_3d_ros</depend>
 </ros:Package>

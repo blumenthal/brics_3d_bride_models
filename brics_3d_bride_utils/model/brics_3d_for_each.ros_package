@@ -6,7 +6,4 @@
   </node>
   <depend>sensor_msgs</depend>
   <depend>brics_3d_msgs</depend>
-  <topic name="segments_to_meshes" publisher="//@node.0/@publisher.0">
-    <subscriber href="../../brics_3d_bride_mesh_generation/model/brics_3d_mesh_generation.ros_package#//@node.0/@subscriber.0"/>
-  </topic>
 </ros:Package>
