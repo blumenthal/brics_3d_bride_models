@@ -1,0 +1,9 @@
+<stack>
+  <description brief="brics_3d_bride_models">brics_3d_bride_models</description>
+  <author>Sebastian Blumenthal/blumenthal@gps-stuttgart.de</author>
+  <license>gnu-lgpl-v2.1 modified-bsd</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/brics_3d_bride_models</url>
+  <depend stack="ros" />
+
+</stack>
