@@ -10,6 +10,7 @@
 #include <brics_3d/algorithm/segmentation/RegionBasedSACSegmentation.h>
 #include <brics_3d/util/PCLTypecaster.h>
 #include <brics_3d/util/Timer.h>
+#include <brics_3d/core/Logger.h>
 /* protected region user include files end */
 
 class DichotomySegmentor_config
@@ -48,6 +49,7 @@ public:
     void configure(DichotomySegmentor_config config) 
     {
         /* protected region user configure on begin */
+		brics_3d::Logger::setMinLoglevel(brics_3d::Logger::LOGDEBUG);
 		/* protected region user configure end */
     }
     void update(DichotomySegmentor_data &data, DichotomySegmentor_config config)
@@ -88,7 +90,7 @@ public:
 		sacSegmenter.getModelCoefficients(modelCoefficients);
 
 		cout << "Timer: Plane segmantation took " << timer.getElapsedTime() << "[ms]" << endl;
-		cout << "Found Inliers: " << inliers.size() << endl;
+		cout << "Found Inliers: " << inliers.size() << "of " << inputPointCloud.getSize() << " total points." << endl;
 
 		brics_3d::MaskROIExtractor indicesExtractor;
 		indicesExtractor.setMask(&inliers);
