@@ -3,11 +3,14 @@
 #include <sensor_msgs/PointCloud2.h>
 #include <sensor_msgs/PointCloud2.h>
 
+
+
+/* protected region user include files on begin */
+
 /* BRICS_3D includes */
 #include <brics_3d/algorithm/filtering/Octree.h>
 #include <brics_3d/util/PCLTypecaster.h>
 
-/* protected region user include files on begin */
 /* protected region user include files end */
 
 class OctreeFilter_config
