@@ -1,0 +1,19 @@
+<package>
+  <description brief="brics_3d_bride_utils"></description>
+  <author>blumenthal</author>
+  <license>LGPL, BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+  <depend package="roscpp"/>
+  <depend package="std_msgs"/>
+  <depend package="rospy"/>
+  <depend package="dynamic_reconfigure"/>
+  	<depend package="sensor_msgs"/>
+  	<depend package="brics_3d_msgs"/>
+  /* protected region additional manifest statements on begin */
+  /* protected region additional manifest statements end */
+  
+  
+</package>
+
+
