@@ -75,7 +75,7 @@ public:
 
     	/* Eucledian Clustering */
     	clusterSegmentator->setClusterTolerance(0.02); // [m]
-    	clusterSegmentator->setMinClusterSize(/*30*/100);
+    	clusterSegmentator->setMinClusterSize(25/*30 100*/);
     	clusterSegmentator->setMaxClusterSize(25000);
 
     	clusterSegmentator->setPointCloud(&inputPointCloud);
